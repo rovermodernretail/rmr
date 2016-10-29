@@ -5,41 +5,82 @@ title: Rover | The New Way to Shop
 <link href="https://fonts.googleapis.com/css?family=Abel|Abhaya+Libre|Lato:300,400|Raleway:100,200,500|Roboto" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/jquery.typeit/4.2.3/typeit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
 
 <style>
     .header {
-        font-family: 'Abel';
+        font-family: 'raleway';
+        font-weight: 200;
         font-size: 320%;
     }
+
+    .rover1 {
+        font-family: 'Abel';
+        font-size: 6em;
+        width: 100%;
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+    }
+
+    .rover2 {
+        font-family: 'Abel';
+        font-size: 525%;
+        width: auto;
+        height: auto;
+        margin: auto;
+    }
+
     .header2 {
         font-family: 'Abel';
-        font-size: 270%;
+        font-size: 2em;
+        height: 10em;
+        width: auto;
+        margin: auto;
     }
+
     .shopdiff {
         font-family: 'Raleway', sans-serif;
         font-size: 500%;
         font-weight: 200;
     }
+
     .descriptions {
         font-family: 'Raleway', sans-serif;
         font-weight: 200;
         font-size: 300%;
     }
+
     .intro-text {
         font-family: 'Lato', sans-serif;
         font-size: 300%;
         font-weight: 300;
     }
+
+    .intro-text2 {
+        font-family: 'raleway';
+        font-size: 300%;
+        font-weight: 200;
+    }
+
+    .scrolldown {
+        font-size: 200%;
+    }
+
     a:link {
         text-decoration: none;
     }
+
     a:visited {
         text-decoration: none;
     }
+
     .button-wrapper {
         display: block;
         text-align: center;
     }
+
     .button {
         border: 1px;
         border-radius: 3em;
@@ -49,14 +90,17 @@ title: Rover | The New Way to Shop
         padding: 1em 2em;
         width: 180px;
     }
+
     .cta-button {
         background-color: white;
         color: black;
-        opacity: 1;
+        opacity: 0.7;
     }
+
     .cta-button:hover {
         background-color: LightBlue;
     }
+
     .subdescriptor {
         font-family: Lato;
         font-weight: 300;
@@ -64,115 +108,194 @@ title: Rover | The New Way to Shop
         color: white;
     }
 
-</style>
-<br><br><br>
-<div class="welcome">
-    <img src="../images/Rovercart_white-2.png" alt="Shopping Cart">
-</div>
-<div class="header">
-    <h1 id="rover" class="welcome"></h1>
-    <script> $('#rover').typeIt({strings: ["mobile self checkoutingness", "real-time product browsability", "rover"],
-    autoStart: true,
-    speed: 110,
-    breakLines: false,
-    loop: true,
-    loopDelay: 1400,
-    });
-    </script>
+    @charset "utf-8";
+    @import "normalize";
+    body {
+        background: #4286F4;
+        text-align: center;
+        font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 1em;
+    }
 
+    .logo {
+        width: 270px;
+        height: 270px;
+        margin-top: 1em;
+    }
+
+    h1 {
+        color: rgba(0, 0, 0, 0.5);
+        font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 1.8em;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    .doc {
+        margin: 3em 0;
+        font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 1.1em;
+        font-weight: 300;
+        a {
+            border: 1px solid white;
+            border-radius: 3px;
+            padding: 0.75em 0.7em;
+            color: white;
+            text-decoration: none;
+            transition: color 0.1s linear;
+            &:hover {
+                background: rgba(0, 0, 0, 0.2);
+                color: white;
+                transition: all 0.15s linear;
+            }
+        }
+    }
+
+    .welcome {
+        -webkit-animation-name: welcome;
+        -webkit-animation-duration: .9s;
+    }
+
+    @-webkit-keyframes welcome {
+        from {
+            -webkit-transform: scale(0);
+            opacity: 0;
+        }
+        50% {
+            -webkit-transform: scale(0);
+            opacity: 0;
+        }
+        82.5% {
+            -webkit-transform: scale(1.03);
+            -webkit-animation-timing-function: ease-out;
+            opacity: 1;
+        }
+        to {
+            -webkit-transform: scale(1);
+        }
+    }
+
+    .quotes {
+        display: none;
+    }
+    .copyright {}
+</style>
+
+<head>
+<div class="rover1">
+    <h1 id="rover" class="quotes1">
+      <strong>rover</strong>
+    </h1>
 </div>
 <br>
+<div class="rover2">
+    <h1 id="rover2"></h1>
+    <script>
+        $('#rover2').typeIt({
+            strings: ["modern retail"],
+            autoStart: false,
+            speed: 50,
+            loop: true,
+            loopDelay: 8000,
+            startDelay: 1150,
+        })
+    </script>
+</div>
+</head>
+<div class="welcome">
+    <img class="logo" src="../images/Rovercart_white-2.png" alt="Shopping Cart">
+</div>
+
+<br><br><br><br><br><br><br><br><br><br>
 <div class="shopdiff">
     Shop<font color="white">Modernly</font>
 </div>
+<br><br><br><br>
+<div class="intro-text">
+  shopping is simple, but difficult
+</div>
 <br><br>
-
-<br>
 <div class="intro-text">
     simple things should be simple
 </div>
-<br>
-<div class="intro-text">
-    like shopping
+<br><br>
+<div class="header">
+<p> And so, </p>
 </div>
 <br>
-<div class="intro-text">
-    Rover makes shopping simple, fun and easy
+<div class="intro-text2">
+    <i> Rover makes shopping <font color="white">simple</font> </i>
     <br><br>
 </div>
 <div class="button-wrapper">
     <h4>
         <a class="button cta-button" href="#about">
-            Learn More</a>
+            Tell me more!</a>
     </h4>
     <br><br>
 </div>
+<br><br><br><br><br><br>
+
+<div class="shopdiff" id="about">
+    how<font color="white">rover</font>works
+</div>
 <br><br><br><br><br>
 
-<div class="header">
-<h1 id="about" style="color:white;">
-    How it Works
-</h1>
-<br>
-</div>
 <div class="header2">
-    <h1 id="type1"></h1>
+    <h1 id="roverdescriptions"></h1>
     <script>
-    $('#type1').typeIt({strings: ["Find it faster"],
-    autoStart: false,
-    speed: 70,
-    });
-    </script>
-</div>
-</div>
-<font class="descriptions">
-Search inventories of retailers in real-time
-</font>
-<br>
-<font class="subdescriptor">
-[know before you go]
-</font>
-<br>
-<br><br><br>
-
-<!-- Navigation !-->
-
-<div class="header2">
-    <h1 id="type2"></h1>
-    <script>
-        $('#type2').typeIt({strings: ["Drive less"],
-        autoStart: false,
-        speed: 70,
+        $('#roverdescriptions').typeIt({
+            strings: ["<strong>real-time</strong> browsability", "<strong>fast</strong> navigation", "<strong>easy</strong> self-checkoutingness"],
+            autoStart: true,
+            speed: 80,
+            loop: true,
         });
     </script>
 </div>
-<font class="descriptions">
-Use Google Maps to plan your trip
-</font>
-<br>
-<font class="subdescriptor">
-[shopping routes have never been easier]
-</font>
-<br><br><br>
-<!-- Mobile self checkout !-->
+<br><br><br><br><br><br>
+<div class="descriptions">
+    <font color="white"> find </font> products before you go
+    <br>
+    <font color="white"> plan </font> the best shopping trip
+    <br>
+    <font color="white"> buy </font> from your phone anytime, anywhere
+</div>
+<br><br><br><br><br><br><br>
+<div class="copyright">
+  Copyright (c) 2016 Robert James All Rights Reserved.
+</div>
+<script>
+    (function() {
 
-<div class="header2">
-    <h1 id="type3"></h1>
-    <script>
-        $('#type3').typeIt({strings: ["Live more"],
-        autoStart: false,
-        speed: 70,
-        });
-    </script>
-</div>
-<font class="descriptions">
-Checkout from your phone anytime, anywhere
-</font>
-<br>
-<font class="subdescriptor">
-[skip the line]
-</font>
-</div>
-</div>
-</body>
-</div>
+        var quotes = $(".quotes");
+        var quoteIndex = -1;
+
+        function showNextQuote() {
+            ++quoteIndex;
+            quotes.eq(quoteIndex % quotes.length)
+                .fadeIn(5000)
+                .delay(3000)
+                .fadeOut(3000, showNextQuote);
+        }
+
+        showNextQuote();
+
+    })();
+</script>
+<script>
+    (function() {
+
+        var quotes = $(".quotes1");
+        var quoteIndex = -1;
+
+        function showNextQuote() {
+            ++quoteIndex;
+            quotes.eq(quoteIndex % quotes.length)
+                .fadeIn(5000)
+                .delay(3000)
+        }
+
+        showNextQuote();
+
+    })();
+</script>
